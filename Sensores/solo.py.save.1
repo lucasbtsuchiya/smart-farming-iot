@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+import sys
+import subprocess
+import re
+import os
+import MySQLdb as mdb
+import datetime
+from gpiozero import MCP3008
+from time import sleep
+
+canal = 1 # Canal no conversor AD
+
+usuariodb = "root";
+senhadb = "netmysql";
+bd = "irriga";
+
+
+higro = MCP3008(canal) # Atribui o canal 1 para esta leitura
+
+while True:
+      # Normalizei a escala onde 0 é completamente seco 
+      # e 100 é completamente molhado
+      higro_perc = (1 - higro.value) * 100
+      print('Umidade do Solo {0}%',higro_perc)
+      sleep(1)   # executa 1 leitura nova a cada segundo
+
+

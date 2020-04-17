@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `sensores` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+ 
+  `humidadesolo` varchar(20) NOT NU  `humidadesolo` varchar(20) NOT NULL,
+LL,
+  `dateMeasured` date NOT NULL,
+  `hourMeasured` int(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

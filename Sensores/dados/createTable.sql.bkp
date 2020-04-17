@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS `sensores` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `luminosidade` FLOAT NOT NULL,
+  `humidadesolo` FLOAT NOT NULL,
+  `chuva` varchar(20) NOT NULL,
+  `pressao` FLOAT NOT NULL,
+  `altitude` FLOAT NOT NULL,
+  `temperatura` FLOAT NOT NULL,
+  `humidade` FLOAT NOT NULL,
+  `temp` FLOAT NOT NULL,
+  `ph` FLOAT NOT NULL,
+  `fluxo` FLOAT NOT NULL,
+  `nivel` varchar(20) NOT NULL,
+  `acionamento` varchar(20) NOT NULL,
+  `dateMeasured` date NOT NULL,
+  `hourMeasured` int(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
