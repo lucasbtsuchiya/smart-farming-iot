@@ -131,12 +131,3 @@ flowchart LR
 ## Observability
 - PHP and MySQL logs for audit and support.
 - Python script logs for sensor diagnostics.
-
-## Suggested Roadmap
-- REST API for external integrations.
-- Scheduled collection jobs.
-- Historical dashboards and alerts.
-- Rule-based irrigation control (e.g., soil moisture threshold).
-
-## License
-See `license.txt`.
