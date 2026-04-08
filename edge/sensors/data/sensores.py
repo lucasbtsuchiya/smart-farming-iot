@@ -133,7 +133,10 @@ def readInfo():
 
 #check if table is created or if we need to create one
 try:
-        queryFile=file("createTable.sql","r")
+        baseDir = os.path.dirname(os.path.abspath(__file__))
+        tablePath = os.path.join(baseDir, "createTable.sql")
+        backupPath = os.path.join(baseDir, "createTable.sql.bkp")
+        queryFile=open(tablePath, "r")
 
         con=mdb.connect("localhost", databaseUsername,databasePassword,databaseName)
         currentDate=datetime.datetime.now().date()
@@ -150,7 +153,7 @@ try:
 
                 #now rename the file, because we do not need to recreate the table everytime this script is run
                 queryFile.close()
-                os.rename("createTable.sql","createTable.sql.bkp")
+                os.rename(tablePath, backupPath)
         
 
 except IOError:
